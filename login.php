@@ -11,7 +11,7 @@
 </head>
 <body class="bg-black ">
     <div class="flex h-screen items-center text-[#E4E2DD] flex-col justify-center">
-        <div class="border px-10 py-10 rounded-lg justify-center items-center flex flex-col"> 
+        <div class="border px-10 py-10 rounded-md justify-center items-center flex flex-col"> 
         <img src="images/CS31A-small.png" alt="" width="100px">
         <p class="font-worksans text-[2.2rem] font-black mb-4 text-[#E4E2DD]">Login account</p>
         <div class="flex flex-col gap-2">
@@ -19,7 +19,7 @@
         <input type="password" name="password" id="password" placeholder="Password" size="30" class="pl-2 text-black rounded-sm placeholder:text-gray-500">
         </div>
         <div class="flex justify-end items-end w-full">
-            <button type="submit" id="submit" name="submit" class="bg-[#E4E2DD] text-black rounded-sm mt-3 px-3 py-0.5 flex">Submit</button>
+            <button type="submit" id="submit" name="submit" class="bg-[#E4E2DD] text-black rounded-md mt-3 px-3 py-0.5 flex">Submit</button>
         </div>
         <hr class="w-[15rem] pt-1 justify-start mt-5 ">
         <div class="flex pt-1">
