@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       worksans: ['Work Sans'],
-      rubikmonoone: ['Rubik Mono One'],
+      archivoblack: ['Archivo Black'],
     },
     extend: {},
   },
