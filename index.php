@@ -1,3 +1,18 @@
+<?php
+// Start session
+session_start();
+
+// Check if user is already logged in
+if (isset($_SESSION['user_id'])) {
+    if ($_SESSION['role'] === 'admin') {
+        header('Location: admin.dashboard.php');
+    } else {
+        header('Location: user.dashboard.php'); // For regular users
+    }
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,14 +36,9 @@
             <div class="text-[#DEDEEF] font-archivoblack border p-10 max-[639px]:p-10 max-[426px]:p-3 max-[352px]:p-1 max-[345px]:p-4">
             <p class="xl:text-[2.5rem] lg:text-[2.5rem] md:text-[5.5rem] sm:text-[5rem] max-[639px]:text-[4rem] max-[345px]:text-[3rem] font-black font-archivoblack xl:mb-4 lg:mb-4 ">WELCOME</p>
             <div class="xl:flex xl:flex-col xl:items-start xl:justify-start lg:flex lg:flex-col lg:items-start lg:justify-start md:flex md:flex-col md:items-center md:justify-center sm:flex sm:flex-col sm:items-center sm:justify-center max-[639px]:flex max-[639px]:flex-col max-[639px]:justify-center max-[639px]:items-center max-[345px]:flex max-[345px]:flex-col max-[345px]:justify-center max-[345px]:items-center">
-            <button id="signup" name="signin" class="bg-[#9FA1DD] text-[#080914] xl:w-[13rem] xl:text-[1.5rem] lg:w-[13rem] lg:text-[1.5rem] md:w-[15rem] md:text-[1.5rem] sm:w-[13rem] sm:text-[1.3rem] max-[639px]:w-[11rem]  font-semibold rounded-md tracking-tighter leading-none p-2 font-worksans"> <a href="register.php">Sign up</a></button>
-            <div class="relative flex py-1 items-center xl:w-[13rem] lg:w-[13rem] md:w-[15rem] sm:w-[13rem] max-[639px]:w-[11rem]">
-            <div class="flex-grow border-t border-gray-400"></div>
-             <span class="flex-shrink mx-1 text-gray-400">or</span>
                 <div class="flex-grow border-t border-gray-400"></div>
+                <button id="signin" name="signin" class="bg-[#242779] text-[#dedeef] xl:w-[13rem] xl:text-[1.5rem] lg:w-[13rem] lg:text-[1.5rem] md:w-[15rem] md:text-[1.5rem] sm:w-[13rem] sm:text-[1.3rem] max-[639px]:w-[11rem]  font-semibold rounded-md tracking-tighter leading-none p-2 text-center font-worksans "> <a href="login.php">Sign in</a></button>
             </div>
-            <p class="mb-2 xl:text-[1.2rem] lg:text-[1.2rem] md:text-[1.3rem] sm:text-[1.1rem]">Already have an account?</p>
-            <button id="signin" name="signin" class="bg-[#242779] text-[#dedeef] xl:w-[13rem] xl:text-[1.5rem] lg:w-[13rem] lg:text-[1.5rem] md:w-[15rem] md:text-[1.5rem] sm:w-[13rem] sm:text-[1.3rem] max-[639px]:w-[11rem] font-semibold rounded-md tracking-tighter leading-none p-2 text-center font-worksans"> <a href="login.php">Sign in</a></button>
             </div>
             </div>
         </div>
